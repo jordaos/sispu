@@ -1,0 +1,166 @@
+.dialog__overlay {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.dialog.dialog--open .dialog__content,
+.dialog.dialog--close .dialog__content{
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.dialog.dialog--open .dialog__content {
+	-webkit-animation-name: anim-open;
+	animation-name: anim-open;
+	-webkit-animation-timing-function: cubic-bezier(0.6,0,0.4,1);
+	animation-timing-function: cubic-bezier(0.6,0,0.4,1);
+}
+
+.dialog.dialog--close .dialog__content {
+	-webkit-animation-name: anim-close;
+	animation-name: anim-close;
+}
+
+.dialog button {
+	padding: 1em 2em;
+	outline: none;
+	font-weight: 600;
+	border: none;
+	color: #fff;
+	background: #c94e50;
+	position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.dialog,
+.dialog__overlay,
+.dialog__overlay1,
+.dialog__overlay2 {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+	position: fixed;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.dialog__overlay,
+.dialog__overlay1,
+.dialog__overlay2
+ {
+	position: absolute;
+	z-index: 1;
+	background: rgba(55, 58, 71, 0.9);
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.dialog--open .dialog__overlay,
+.dialog--open .dialog__overlay1,
+.dialog--open .dialog__overlay2 {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dialog__content {
+	width: 50%;
+	max-width: 600px;
+	min-width: 500px;
+	background: #fff;
+	padding: 1em;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+	float: left;
+}
+
+.dialog--open .dialog__content {
+	pointer-events: auto;
+}
+
+/* Content */
+.dialog h2 {
+	margin: 0;
+	font-weight: 400;
+	font-size: 2em;
+	padding: 0 0 20px;
+	margin: 0;
+}
+
+/* FORMULARIO */
+.dialog form{
+}
+.dialog form label{
+	width: 100%;
+    display: block;
+    font-size: 17px;
+    margin: 10px 0;
+    display: inline-block;
+    line-height: 31px;
+    text-align: left;
+}
+.dialog form input[type="TEXT"], .dialog select{
+	padding: 5px;
+    font-size: 17px;
+    width: 300px;
+    float: right;
+    margin-left: 10px;
+}
+.dialog form textarea{
+	width: 300px;
+    height: 100px;
+    max-width: 300px;
+    max-height: 100px;
+    float: right;
+    margin-left: 10px;
+}
+.dialog form input[type="BUTTON"],
+.dialog form input[type="SUBMIT"]{
+	padding: 1em 2em;
+	outline: none;
+	font-weight: 600;
+	border: none;
+	color: #fff;
+	background: #c94e50;
+    cursor: pointer;
+    margin: 30px 0 0;
+}
+/* END - FORMULARIO */
+
+
+
+
+@-webkit-keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(0, 0, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); }
+}
+
+@keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(0, 0, 1); transform: scale3d(0, 0, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+
+@-webkit-keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; -webkit-transform: scale3d(0.5, 0.5, 1); }
+}
+
+@keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; -webkit-transform: scale3d(0.5, 0.5, 1); transform: scale3d(0.5, 0.5, 1); }
+}

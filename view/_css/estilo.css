@@ -1,0 +1,195 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #EEEEEE;
+}
+.menu{
+	box-shadow: 0 1px 1px #999;
+	position: relative;
+	background-color: white;
+}
+.itens{
+	width: 100px;
+    line-height: 35px;
+    text-align: center;
+    float: left;
+    padding-top: 23px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+	text-decoration: none!important;
+}
+.itens:hover{
+	background-color: #D0D0D0;
+}
+.itens img{
+	margin-top: 12px;
+	height: 24px;
+}
+.itens span{
+	display: block;
+	margin: 0;
+    color: #089fd7;
+}
+
+.row{
+	width: auto;
+	display: table;
+}
+
+.logo{
+	width: 85px;
+    margin: 5px;
+}
+.col-lg-2{
+	display: inline-block;
+}
+
+#caixapesquisa{
+    width: 24%;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0 1px 5px #999;
+    float: right;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+
+#pesquisa{
+    margin-top: 4px;
+    border: 1px solid #05dcff;
+    width: 88%;
+    margin-left: 19px;
+    height: 32px;
+}
+#pesquisa button{
+	background-color: transparent;
+	border: none;
+}
+#pesquisa img{
+	height: 25px;
+	padding-top: 5px;
+	margin-left: 10px;
+}
+#TxtPesquisa{
+float: left;
+    background-color: transparent;
+    padding-left: 10px;
+    border: none;
+    width: 75%;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    padding-top: 4px;
+	outline: none;
+}
+#logo{
+    width: 110%;
+    z-index: 999;
+    height: 109px;
+    float: left;
+    background-image: url(../SISPU.png);
+    background-size: 100% 100%;
+    margin-left: 10px;
+    margin-top: 0px;
+    position: absolute;
+
+}
+
+.menuLateral{
+    width: 24%;
+    float: right;
+    margin-top: 7px;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: 0 1px 5px #999;
+	}
+#caixaSubMenu{
+	width: 100%;
+	margin-top: 0px;
+	padding-left: 12px;
+	float: left;
+}
+.subMenus span{
+	text-align: left;
+	font-family: sans-serif;
+	color: black;
+
+}
+.subMenus a{
+	text-decoration: none;
+}
+.itensLateral{
+	margin-top: 2px;
+}
+.itensLateral:hover{
+	background-color: #D0D0D0;
+}
+.subMenus .icon{
+	height: 20px;
+	margin-right: 5px;
+	padding-left: 3px;
+	padding-bottom: 4px;
+}
+.subMenus label{
+	text-align: left;
+	padding-top: 10px;
+}
+.mapa{
+	width: 72%;
+    height: 550px;
+    float: left;
+    margin-top: 7px;
+    background: white;
+    box-shadow: 0 1px 5px #999;
+    margin-left: 30px;
+}
+@media(max-width: 1050px){
+	@media(max-width: 950px){
+		@media(max-width: 750px){
+			.row{
+				width: 100%;
+			}
+
+			.menuLateral{
+				display: none;
+			}
+			#caixapesquisa{
+				display: none;
+			}
+			#pesquisa{
+				display: none;
+			}
+			.mapa{
+				width: 100%;
+
+			}
+			#inicio{
+				width: 16.50%;
+				margin-left: 5%;
+			}
+			#saiba{
+				width: 18.50%;
+			}
+			#logo{
+				width: 85%;
+				height: 70px;
+				margin-top: 22px;
+
+
+			}
+			#sugestao{
+				width: 14%;
+				margin-left: -8px;			}
+			#indicar{
+				width: 14.5%;
+				margin-right: 3px;
+			}
+			.itens span{
+				font-size:8px;
+			}
+
+		}
+	}
+}

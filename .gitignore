@@ -1,0 +1,4 @@
+$ cat .gitignore
+
+# Ignorar arquivos específicos
+class/Conexao.class.php

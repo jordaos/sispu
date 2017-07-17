@@ -1,0 +1,65 @@
+#verPonto .dialog__content{
+	max-height: 90%;
+	width: 1000px;
+	overflow-y: auto;
+}
+.imageSolicitacao{
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.div_caixaComentarios{
+	width: 100%;
+	padding: 5px;
+	border: 2px;
+	background: #EFEFEF;
+	float: left;
+}
+
+
+.div_Comentario{
+	float: left; 
+	padding: 5px;
+	border: 2px solid white;
+	width: 100%;
+}
+
+.div_Comentario > img{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+
+.div_comentarioUsuario{
+	float: left;
+	margin: 0 5px;
+	width: 80%;
+}
+
+.div_comentarioUsuario > label{
+	font-size: 17px;
+	color: #555;
+}
+
+
+.escreverComentario{
+	width: 100%;
+	margin: 10px 0;
+    display: inline-block;
+}
+
+.escreverComentario > textarea{
+	width: 450px;
+	max-width: 450px;
+    height: 100px;
+    max-height: 100px;
+    float: left;
+}
+
+.escreverComentario > input[type="button"]{
+	float: left;
+    margin: 0 5px;
+}
